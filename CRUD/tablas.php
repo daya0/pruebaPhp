@@ -26,7 +26,7 @@ $sql =
     correo VARCHAR (50) NOT NULL,
 )";
 
-    $conn->select_db($db);
+    //$conn->select_db($db);
 
 $sql = 
     "CREATE TABLE producto (
