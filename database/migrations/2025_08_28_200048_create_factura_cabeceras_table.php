@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('factura_cabeceras', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('cliente_id')->constrained('clientes')->onDelete('cascade');
+            $table->dateTime('fecha');
+            $table->decimal('total', 10, 2);
             $table->timestamps();
         });
     }
